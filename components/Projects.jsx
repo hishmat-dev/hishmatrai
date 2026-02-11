@@ -11,17 +11,22 @@ export function Projects() {
         'Responsive customer and seller dashboards supporting 250+ products with cart, wishlist, order tracking, and inventory management.',
       technologies: ['React.js', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       highlights: ['Responsive Design', '250+ Products', 'Order Tracking', 'Inventory Management'],
-    
+
       liveLink: 'https://orza.pk/',
     },
     {
       title: 'Workwise – Corporate Social Solution (SaaS)',
       period: 'Feb 2025 - May 2025',
       description:
-        'Enterprise SaaS platform featuring Hospital Management System with patient management, appointments, staff administration, and modular healthcare features.',
+        'A large-scale enterprise SaaS platform designed for corporate and healthcare environments. Contributed to the development of a high-converting landing page and a robust Hospital Management System module, including patient lifecycle management, appointment scheduling, staff administration, and role-based operational controls.',
       technologies: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Redux'],
-      highlights: ['Hospital Management', 'Patient Tracking', 'Appointment System', 'Role-Based Access'],
-  
+      highlights: [
+        'Landing Page Development',
+        'Hospital Management Module',
+        'Patient Lifecycle Management',
+        'Appointment Scheduling System',
+        'Role-Based Access Control'
+      ],
       liveLink: 'https://www.workw.com',
     },
     {
@@ -58,11 +63,10 @@ export function Projects() {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className={`rounded-xl border transition-all hover:border-primary group animate-fade-in-up ${
-                project.featured
+              className={`rounded-xl border transition-all hover:border-primary group animate-fade-in-up ${project.featured
                   ? 'bg-background border-primary/50 p-8 md:p-12'
                   : 'bg-background border-border p-8 hover:shadow-lg hover:-translate-y-1'
-              }`}
+                }`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
